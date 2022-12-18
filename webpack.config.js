@@ -10,11 +10,12 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name][contenthash].js',
+    filename: 'index.js',
+    //filename: '[name][contenthash].js',
     clean: true,
-    assetModuleFilename: '[name][ext]',
+    //assetModuleFilename: '[name][ext]',
   },
-  devtool: 'source-map',
+  //devtool: 'source-map',
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'dist'),
@@ -67,8 +68,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Webpack App',
       filename: 'index.html',
-      template: 'public/template.html',
+      template: path.join(__dirname, 'public', 'index.html'),
     }),
     new BundleAnalyzerPlugin(),
   ],
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+  },
 }
