@@ -68,7 +68,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Webpack App',
       filename: 'index.html',
-      template: path.join(__dirname, 'public', 'index.html'),
+      template: 'public/index.html',
     }),
     new BundleAnalyzerPlugin(),
   ],

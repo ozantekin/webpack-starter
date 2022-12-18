@@ -4,7 +4,7 @@
   "description": "- npm init -y",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode production",
     "dev": "webpack serve"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "@redux-devtools/core": "^3.13.1",
     "babel-loader": "^9.1.0",
     "css-loader": "^6.7.3",
+    "express": "^4.18.2",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "postcss": "^8.4.20",
