@@ -4,18 +4,13 @@ const BundleAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
-  mode: 'development',
-  entry: {
-    bundle: path.resolve(__dirname, 'src/index.js'),
-  },
+  mode: 'production',
+  entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
-    //filename: '[name][contenthash].js',
     clean: true,
-    //assetModuleFilename: '[name][ext]',
   },
-  //devtool: 'source-map',
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'dist'),
@@ -45,17 +40,6 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env',
-              [
-                '@babel/preset-react',
-                {
-                  runtime: 'automatic',
-                },
-              ],
-            ],
-          },
         },
       },
       {
@@ -66,13 +50,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack App',
-      filename: 'index.html',
-      template: 'public/index.html',
+      template: path.resolve(__dirname, 'public', 'index.html'),
     }),
-    new BundleAnalyzerPlugin(),
   ],
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.md'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
 }

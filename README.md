@@ -2,6 +2,7 @@
 
 - npm init -y
 - npm i -D webpack webpack-cli
+- npm install webpack-dev-server --save-dev
 - webpack.config.js
 - npm i -D sass style-loader css-loader sass-loader
 - npm i -D html-webpack-plugin html-loader
