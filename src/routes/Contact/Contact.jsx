@@ -1,4 +1,4 @@
-import './contect.styles.scss'
+import './contact.styles.scss'
 
 export default function Contact() {
   return (
