@@ -23,6 +23,7 @@
 ## Files
 
 - webpack.config.js
+- .babelrc
 - tailwind.config.js
 - postcss.config.js
 - package.json "scripts"
