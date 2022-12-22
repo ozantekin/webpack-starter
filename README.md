@@ -41,4 +41,4 @@ To use these commands, navigate to your project directory and run them one by on
 - Build for production
   - npm run build
 
-### [Live Demo](https://starter-kit-webpack.netlify.app/)
+### [Live Demo](https://starter-kit-webpack.netlify.app/) | [Turkish](https://www.ozantekin.dev/notes/webpack-starter-kit)
