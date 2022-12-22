@@ -11,6 +11,7 @@ module.exports = {
     filename: 'index.js',
     clean: true,
   },
+  devtool: 'source-map',
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'dist'),
@@ -52,6 +53,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html'),
     }),
+    new BundleAnalyzerPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.md'],
